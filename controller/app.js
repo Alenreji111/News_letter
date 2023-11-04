@@ -61,7 +61,7 @@ app.listen(3000,function(){
 
 })
 
-exports.api=functions.https.onRequest(app)
+exports.app=app
 
 
 
