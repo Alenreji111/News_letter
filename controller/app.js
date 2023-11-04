@@ -4,6 +4,7 @@ const request = require('request')
 const path = require('path')
 const { MailChimp } = require('./MailChimp')
 const mailChimpClient= new MailChimp()
+const functions = require("firebase-function")
 // import axios from 'axios'
 
 const app = express()
@@ -60,6 +61,7 @@ app.listen(3000,function(){
 
 })
 
+exports.api=functions.https.onRequest(app)
 
 
 
